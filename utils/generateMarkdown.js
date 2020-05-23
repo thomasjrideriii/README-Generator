@@ -46,8 +46,8 @@ To test, please run the following code:
 
 ## Questions
 
-For any questions or feedback, please contact [${data.username}](github.com/${data.username}) at <${data.email}>.
+For any questions or feedback, please contact [${data.username}](github.com/${data.username}) at <${data.userEmail}>.
 `;
 }
 
-module.exports = {generateMarkdown: generateMarkdown};
+module.exports = generateMarkdown;
