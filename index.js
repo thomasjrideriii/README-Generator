@@ -1,4 +1,10 @@
-const inquirer = require("inquirer")
+const inquirer = require("inquirer");
+
+const generateMarkdown = require("./utils/generateMarkdown");
+
+const fs = require("fs");
+
+let markdownText = "";
 
 const questions = [
 {
@@ -62,12 +68,24 @@ const questions = [
 
 function writeToFile(fileName, data) {
 
-    
+    fs.writeFile("constructedReadme/README.md", markdownText, function(err) {
+        if (err) {
+            return console.log (err);
+        }
+    }); 
 }
 
 function init() {
 
-    inquirer.prompt(questions).then(generateMarkdown(response))
+    inquirer.prompt(questions).then(function(response){
+        var markdownData = response
+        console.log(markdownData)
+        markdownText = generateMarkdown.generateMarkdown(markdownData)
+        console.log(markdownText)
+    })
+
+    
+    
 }
 
 init();

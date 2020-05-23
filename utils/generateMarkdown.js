@@ -2,11 +2,11 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 
-![Licencing Icon](https://img.shields.io/static/v1?label=License&message=Licence&color=green)
+![Licencing Icon](https://img.shields.io/static/v1?label=License&message=${data.license}&color=green)
 
 ## Description
 
-Placeholder Text!
+${data.decription}
 
 ## Table of Contents
 
@@ -22,32 +22,32 @@ Placeholder Text!
 To install dependencies, please run the following code:
 
 
-    node i
+    ${data.install}
 
 
 ## Usage
 
-Placeholder Text!
+${data.usage}
 
 ## License
 
-This project is licensed under . . . . 
+This project is licensed under ${data.license}.
 
 ## Contributing
 
-Placeholder Text
+${data.contribution}
 
 ## Tests
 
 To test, please run the following code:
 
-    node test
+    ${data.test}
 
 
 ## Questions
 
-For any questions or feedback, please contact [username](github.com/username) at <email@example.com>.
+For any questions or feedback, please contact [${data.username}](github.com/${data.username}) at <${data.email}>.
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = {generateMarkdown: generateMarkdown};
