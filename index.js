@@ -68,7 +68,7 @@ const questions = [
 
 function writeToFile(fileName, data) {
 
-    fs.writeFile("constructedReadme/README.md", markdownText, function(err) {
+    fs.writeFile(fileName, data, function(err) {
         if (err) {
             return console.log (err);
         }
@@ -82,6 +82,7 @@ function init() {
         console.log(markdownData)
         markdownText = generateMarkdown.generateMarkdown(markdownData)
         console.log(markdownText)
+        writeToFile("constructedReadme/README.md", markdownText)
     })
 
     
