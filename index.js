@@ -1,5 +1,56 @@
 const questions = [
-
+{
+    type: "input",
+    message: "What is your Github username?",
+    name: "username"
+}
+{
+    type: "input",
+    message: "What is your email?",
+    name: "userEmail"
+}
+{
+    type: "input",
+    message: "What is the url to your project?",
+    name: "siteURL"
+}
+{
+    type: "input",
+    message: "Please describe your project in a few short lines.",
+    name: "description"
+}
+{
+    type: "list",
+    message: "What licensing will your project use?",
+    choices: [
+        "MIT",
+        "MPL",
+        "Apache",
+        "BSD-2",
+        "BSD-3"
+    ],
+    name: "license"
+}
+{
+    type: "input",
+    message: "What command should run to install dependencies?",
+    name: "install"
+}
+{
+    type: "input",
+    message: "What command should be run to test the code?",
+    name: "test"
+}
+{
+    type: "input",
+    message: "What does the user need to know to operate this repo?",
+    name: "usage"
+}
+{
+    type: "input",
+    message: "What does the user need to know about contributing to this repo?",
+    name: "contribution"
+}
 ];
 
 function writeToFile(fileName, data) {
@@ -44,7 +95,7 @@ function writeToFile(fileName, data) {
     ## Tests
     
     To test, please run the following code:
-    
+
     
         node test
     
