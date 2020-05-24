@@ -85,8 +85,6 @@ function init() {
         writeToFile("constructedReadme/README.md", markdownText)
     })
 
-    
-    
 }
 
 init();
