@@ -79,9 +79,9 @@ function init() {
 
     inquirer.prompt(questions).then(function(response){
         var markdownData = response
-        console.log(markdownData)
+        // console.log(markdownData)
         markdownText = generateMarkdown(markdownData)
-        console.log(markdownText)
+        // console.log(markdownText)
         writeToFile("constructedReadme/README.md", markdownText)
     })
 
