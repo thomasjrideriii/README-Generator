@@ -6,6 +6,8 @@ A README Generator created using Node.js
 
 The README-Generator uses a series of user inputs intitalized through npm-inquirer to ask the user a series of questions about their project, and runs them through a fs system to create a functional README file.  This file is placed in the folder "constructedReadme" for ease of access, and to avoid overwriting this file.
 
+![Demo](assets/images/README-Generator-demo.gif)
+
 ## Intitalization
 
 After downloading the repo, the user will need to run the
